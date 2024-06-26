@@ -1,0 +1,93 @@
+body{
+    width: 100%;
+}
+.container{
+    margin: 0 auto;
+    background: #000;
+}
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    
+}
+.container {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #6F2B8C;
+    width: 320px;
+    border: 2px solid #48A1D9;
+    margin: 0 auto;
+}
+h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    background-color: #222;
+    color: #0ff;
+    font-family: 'Orbitron', sans-serif;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+.form-group input:focus, .form-group textarea:focus {
+    box-shadow: 0 0 10px #0ff;
+}
+.form-group textarea {
+    resize: vertical;
+}
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0ff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group button:hover {
+    background-color: #00b3b3;
+    box-shadow: 0 0 10px #0ff;
+}
+.back-button {
+    background-color: #333;
+    margin-top: 10px;
+    color: #0ff;
+}
+.back-button:hover {
+    background-color: #555;
+    box-shadow: 0 0 10px #0ff;
+} */
