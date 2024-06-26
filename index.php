@@ -7,6 +7,8 @@
 </head>
 <body>
     <a href="cadastro_filmes.php"><button>Cadastrar Filmes</button></a>
+    <a href="lista_filmes.php"><button>Filmes</button></a>
+
     
 </body>
 </html>

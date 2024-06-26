@@ -1,19 +1,19 @@
 <?php
-//verificar se um cliente foi selecionado para ediçao
-    if (isset($_GET["id"])){
-        $cliente_id =$_GET["id"];
+    //verifica se um cliente foi selecionado para ediçao
+if (isset ($_GET["id"])){
+    $tb_avaliacaofilmes_id = $_GET["id"];
+    
+    // Conexão com banco de dados 
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "db_avaliacao";
 
-        //conexao com o banco de dados
-        $servername ="localhost";
-        $username = "root";
-        $password =   "";
-        $dbnome = "bd_avaliacao";
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-        $conn = new mysqli($servername, $username, $password, $dbnome);
-
-        if ($conn->connect_error) {
-            die("Erro na conexao com o banco de dados: " .$conn->connect_error);
-    } 
+    if ($conn->connect_error) {
+        die("Erro na conexão com o banco de dados: " . $conn->connect_error);
+    }
     
     //obter os dados dos cliente para ediçao
     $sql ="SELECT * FROM tb_avaliacaofilmes WHERE id = $tb_avaliacaofilmes_id";
@@ -35,10 +35,11 @@
         $novo_elenco = $_POST["elenco"];
 
         //atualizar os dados do cliente no banco de dados
-        $sql = "UPDATE tb_avaliacaofilmes SET titulo = '$novo_titulo',  ='$novo_categoria', categoria = '$novo_direcao', direcao = '$novo_elenco' WHERE id = $tb_avaliacao_id";
+        $sql = "UPDATE tb_avaliacaofilmes SET titulo = '$novo_titulo',  categoria ='$novo_categoria', direcao = '$novo_direcao', elenco = '$novo_elenco' WHERE id = $tb_avaliacaofilmes_id";
         
-        if($conn->query($sql) === TRUE){
-            echo "Dados atualizados com sucesso !";
+        if ($conn->query($sql) === TRUE){
+            header("Location: lista_filmes.php?excluido=true");
+            exit;
 
         }else{
             echo "Erro ao atualizar os dados:" . $conn->erro;
@@ -48,12 +49,12 @@
     }
 
     $conn->close();
-    }   else{
-            echo "Cliente nao especificado para a edição";
-            exit;
-    
+}   else{
+    echo "Cliente nao especificado para a edição";
+    exit;
 
-        }
+
+    }
 ?>        
 
 <!DOCTYPE html>
@@ -81,7 +82,7 @@
     <input type="submit" value="Salvar Alterações">
     </form>
     
-    <br><a href="/Cadastrar/">Voltar</a>
+    <br><a href="lista_filmes.php">Voltar</a>
 
     
 </body>
